@@ -43,6 +43,18 @@
   }],
 
 "provisioners": [
+{
+  "type": "shell",
+  "inline": ["ls -l /var/www/html"]
+},
+{
+  "type": "shell",
+  "inline": ["ls -ld /var/www/html"]
+},
+{
+  "type": "shell",
+  "inline": ["id"]
+},
   {
     "type": "file",
     "source": "index.php",

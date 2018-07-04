@@ -25,7 +25,6 @@
     "force_deregister": true,
     "force_delete_snapshot": true,
     "vpc_id": "vpc-b24ca8d7",
-    "security_group_id": "sg-24c4325d",
     "iam_instance_profile": "{{user `EC2S3Role`}}",
     "tags": {
       "owner": "DevOps"

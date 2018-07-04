@@ -2,12 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: hashicorp:packer
+    working_directory: ~/packer
     steps:
       - checkout
       - run:
-          name: Greeting
+          name: Build image
           command: echo Hello, world.
-      - run:
-          name: Print the Current Time
-          command: date

@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: hashicorp:packer
+      - image: hashicorp/packer
     working_directory: ~/packer
     steps:
       - checkout

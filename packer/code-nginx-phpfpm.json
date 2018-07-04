@@ -43,11 +43,10 @@
   }],
 
 "provisioners": [
-    { 
-    "type": "shell",
-    "inline": [
-      "sudo echo hola"
-    ]
-    }
+  {
+    "type": "file",
+    "source": "index.php",
+    "destination": "/var/www/html"
+  }
   ]
 }

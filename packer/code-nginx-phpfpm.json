@@ -25,7 +25,6 @@
     "force_deregister": true,
     "force_delete_snapshot": true,
     "vpc_id": "vpc-b24ca8d7",
-    "iam_instance_profile": "{{user `EC2S3Role`}}",
     "tags": {
       "owner": "DevOps"
     },
@@ -47,10 +46,7 @@
     { 
     "type": "shell",
     "inline": [
-      "sudo apt-get update",
-      "sudo apt-get upgrade -y",
-      "sudo apt-get install python -y",
-      "sudo apt-get autoremove -y"
+      "sudo echo hola"
     ]
     }
   ]

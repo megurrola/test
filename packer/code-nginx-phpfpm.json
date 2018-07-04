@@ -46,7 +46,7 @@
   {
     "type": "file",
     "source": "index.php",
-    "destination": "/var/www/html"
+    "destination": "/var/www/html/index.php"
   }
   ]
 }

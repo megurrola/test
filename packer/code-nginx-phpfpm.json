@@ -43,18 +43,10 @@
   }],
 
 "provisioners": [
-{
-  "type": "shell",
-  "inline": ["ls -l /var/www/html"]
-},
-{
-  "type": "shell",
-  "inline": ["ls -ld /var/www/html"]
-},
-{
-  "type": "shell",
-  "inline": ["id"]
-},
+  {
+    "type": "shell",
+    "inline": ["sudo chmod 777 /var/www/html"]
+  },
   {
     "type": "file",
     "source": "index.php",

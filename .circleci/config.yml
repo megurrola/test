@@ -8,4 +8,4 @@ jobs:
       - checkout
       - run:
           name: Build image
-          command: echo Hello, world.
+          command: packer build packer/code-nginx-phpfpm.json

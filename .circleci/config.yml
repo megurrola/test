@@ -8,4 +8,4 @@ jobs:
       - checkout
       - run:
           name: Build image
-          command: packer build packer/code-nginx-phpfpm.json
+          command: packer build packer/jet8-code-nginx-phpfpm.json

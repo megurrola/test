@@ -13,7 +13,7 @@
     "source_ami_filter": {
       "filters": {
         "virtualization-type": "hvm",
-        "name": "nginx-phpfpm-*",
+        "name": "jet8-base-nginx-phpfpm-*",
         "root-device-type": "ebs"
       },
       "owners": ["435960735245"],
@@ -21,7 +21,7 @@
     }, 
     "ssh_username": "ubuntu",
     "associate_public_ip_address": true,
-    "ami_name": "code-nginx-phpfpm-{{timestamp}}",
+    "ami_name": "jet8-code-nginx-phpfpm-{{timestamp}}",
     "force_deregister": true,
     "force_delete_snapshot": true,
     "vpc_id": "vpc-b24ca8d7",
@@ -44,13 +44,9 @@
 
 "provisioners": [
   {
-    "type": "shell",
-    "inline": ["sudo chmod 777 /var/www/html"]
-  },
-  {
     "type": "file",
     "source": "index.php",
-    "destination": "/var/www/html/index.php"
+    "destination": "/home/forge/apps.beta.jet8.io/current/public/index.php"
   }
   ]
 }

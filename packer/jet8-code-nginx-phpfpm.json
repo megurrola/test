@@ -2,7 +2,8 @@
   "variables": {
     "region": "ap-southeast-1",
     "aws_access_key": "",
-    "aws_secret_key": ""
+    "aws_secret_key": "",
+    "SHA1": "{{env `CIRCLE_SHA1`}}"
   },
 
   "builders": [{
@@ -30,15 +31,16 @@
     },
     "run_tags": { 
       "owner": "DevOps",
-      "Name": ""
+      "Name": "jet8-code-nginx-phpfpm"
     },
     "run_volume_tags": {
       "owner": "DevOps",
-      "Name": ""
+      "Name": "jet8-code-nginx-phpfpm",
+      "SHA1": "{{user `CIRCLE_SHA1`}}"
     },
     "snapshot_tags": {
       "owner": "DevOps",
-      "Name": ""
+      "Name": "jet8-code-nginx-phpfpm"
     }
   }],
 

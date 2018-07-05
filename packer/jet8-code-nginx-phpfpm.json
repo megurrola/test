@@ -31,23 +31,19 @@
     },
     "tags": { 
       "owner": "DevOps",
-      "Name": "jet8-code-nginx-phpfpm",
-      "SHA1": "{{user `SHA1`}}"
+      "Name": "jet8-code-nginx-phpfpm"
     },
     "run_tags": { 
       "owner": "DevOps",
-      "Name": "jet8-code-nginx-phpfpm",
-      "SHA1": "{{user `SHA1`}}"
+      "Name": "jet8-code-nginx-phpfpm"
     },
     "run_volume_tags": {
       "owner": "DevOps",
-      "Name": "jet8-code-nginx-phpfpm",
-      "SHA1": "{{user `SHA1`}}"
+      "Name": "jet8-code-nginx-phpfpm"
     },
     "snapshot_tags": {
       "owner": "DevOps",
-      "Name": "jet8-code-nginx-phpfpm",
-      "SHA1": "{{user `SHA1`}}"
+      "Name": "jet8-code-nginx-phpfpm"
     }
   }],
 

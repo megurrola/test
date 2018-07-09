@@ -1,3 +1,3 @@
 <?php
-print "version 6";
+print "version 7";
 

@@ -9,10 +9,3 @@ jobs:
       - run:
           name: Build image
           command: packer build packer/jet8-code-nginx-phpfpm.json
-  deploy:
-    docker:
-      - image: circleci/awscli:latest
-    steps:
-      - run:
-          name: Update AWS launch template
-          commanmd: aws --version

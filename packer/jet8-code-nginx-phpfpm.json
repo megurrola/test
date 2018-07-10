@@ -54,8 +54,13 @@
   },
   {
     "type": "file",
-    "source": "index.php",
+    "source": "../index.php",
     "destination": "/home/forge/apps.beta.jet8.io/current/public/index.php"
+  },
+  {
+    "type": "ansible",
+    "playbook_file": "../ansible/create_user_data_script.yml",
+    "user": "ubuntu"
   }
   ]
 }

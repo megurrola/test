@@ -54,7 +54,7 @@
   },
   {
     "type": "file",
-    "source": "../index.php",
+    "source": "index.php",
     "destination": "/home/forge/apps.beta.jet8.io/current/public/index.php"
   },
   {

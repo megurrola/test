@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Build image
           command: packer build packer/jet8-code-nginx-phpfpm.json
-  build:
+  deploy:
     docker:
       - image: circleci/awscli:latest
       steps:

@@ -1,4 +1,4 @@
 <?php
-print "version 5";
+print "version 6";
 
 

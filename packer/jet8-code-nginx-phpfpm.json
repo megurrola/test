@@ -46,4 +46,17 @@
       "Name": "{{user `name`}}"
     }
   }]
+
+"provisioners": [
+  {
+    "type": "shell",
+    "inline": ["sudo chmod 777 /home/forge/apps.beta.jet8.io/current/public"]
+  },
+  {
+    "type": "file",
+    "source": "index.php",
+    "destination": "/home/forge/apps.beta.jet8.io/current/public/index.php"
+  }
+]
+
 }

@@ -7,5 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Build image
-          command: packer build packer/jet8-code-nginx-phpfpm.json
+          command: |
+             wget --header='Accept: application/vnd.github.v3.raw' \
+                 -O index.php\
+                  https://api.github.com/repos/megurrola/test/contents/index.php\?access_token=$GITHUB_TOKEN&ref=$CIRCLE_BRANCH
+             ls -l venice-staging-ami.json
+#          name: Build image
+#          command: packer build packer/jet8-code-nginx-phpfpm.json

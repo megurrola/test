@@ -6,7 +6,8 @@
     "instance_type": "t2.micro",
     "source_ami_name": "jet8-base-nginx-phpfpm-*",
     "owner": "DevOps",
-    "name": "jet8-code-nginx-phpfpm"
+    "name": "venice-staging",
+    "env": "Staging"
   },
 
   "builders": [{
@@ -30,19 +31,23 @@
     "force_delete_snapshot": true,
     "vpc_id": "vpc-b24ca8d7",
     "tags": {
-      "owner": "{{user `owner`}}",
+      "Owner": "{{user `owner`}}",
+      "Env": "{{user `env`}}",
       "Name": "{{user `name`}}"
     },
     "run_tags": {
-      "owner": "{{user `owner`}}",
+      "Owner": "{{user `owner`}}",
+      "Env": "{{user `env`}}",
       "Name": "{{user `name`}}"
     },
     "run_volume_tags": {
-      "owner": "{{user `owner`}}",
+      "Owner": "{{user `owner`}}",
+      "Env": "{{user `env`}}",
       "Name": "{{user `name`}}"
     },
     "snapshot_tags": {
-      "owner": "{{user `owner`}}",
+      "Owner": "{{user `owner`}}",
+      "Env": "{{user `env`}}",
       "Name": "{{user `name`}}"
     }
   }],

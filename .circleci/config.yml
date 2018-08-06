@@ -9,13 +9,10 @@ jobs:
 #      - checkout
       - run:
           command: |
-             mkdir /tmp/artifacts;
              wget -O /tmp/artifacts/test.txt --header='Accept: application/vnd.github.v3.raw' \
                   https://api.github.com/repos/megurrola/test/contents/dir/file.txt?ref=$CIRCLE_BRANCH&access_token=$GITHUB_TOKEN;
-             echo "my artifact files in a dir" > /tmp/artifacts/artifact.txt;
+             ls -l;
 
-      - store_artifacts:
-          path: /tmp/artifacts
 
 #         name: Build image
 #          command: packer build packer/jet8-code-nginx-phpfpm.json

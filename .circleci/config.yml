@@ -11,7 +11,7 @@ jobs:
           command: |
             apk add curl
             curl -H 'Accept: application/vnd.github.v3.raw' \
-                 -L https://api.github.com/repos/megurrola/test/contents/dir/file.txt\?access_token=$GITHUB_TOKEN\&ref=$CIRCLE_BRANCH \
+                 -L https://api.github.com/repos/megurrola/test/contents/dir/file.txt\?access_token=$GITHUB_TOKEN&ref=$CIRCLE_BRANCH \
                  -o test.txt
             ls -l;
 

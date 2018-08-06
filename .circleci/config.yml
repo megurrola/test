@@ -11,7 +11,8 @@ jobs:
           command: |
              wget -O test.txt --header='Accept: application/vnd.github.v3.raw' \
                   https://api.github.com/repos/megurrola/test/contents/dir/file.txt?ref=$CIRCLE_BRANCH&access_token=$GITHUB_TOKEN;
-             echo $GITHUB_TOKEN;
+             echo $GITHUB_TOKEN>txt;
+             cat txt;
              echo $CIRCLE_BRANCH; 
              ls -l;
 

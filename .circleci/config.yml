@@ -11,6 +11,6 @@ jobs:
              wget --header='Accept: application/vnd.github.v3.raw' \
                  -O /tmp/test.txt \
                   https://api.github.com/repos/megurrola/test/contents/test/test.txt\?access_token=$GITHUB_TOKEN&ref=$CIRCLE_BRANCH
-             ls -l /tmpl
+             ls -l /tmp
 #          name: Build image
 #          command: packer build packer/jet8-code-nginx-phpfpm.json

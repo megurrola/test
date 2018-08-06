@@ -9,7 +9,7 @@ jobs:
       - run:
           command: |
              wget -O test.txt --header='Accept: application/vnd.github.v3.raw' --header "Authorization: token $GITHUB_TOKEN" \
-                  "https://api.github.com/repos/megurrola/test/contents/testbranch/dir/file.txt"
+                  https://api.github.com/repos/megurrola/test/contents/dir/file.txt?ref=$CIRCLE_BRANCH 
              ls -l
           name: Build image
 #          command: packer build packer/jet8-code-nginx-phpfpm.json

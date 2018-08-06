@@ -5,12 +5,11 @@ jobs:
       - image: hashicorp/packer
     working_directory: ~/packer
     steps:
-      - checkout
+#      - checkout
       - run:
           command: |
-             wget --header='Accept: application/vnd.github.v3.raw' \
-                 -O index.php\
-                  https://api.github.com/repos/megurrola/test/contents/index.php\?access_token=$GITHUB_TOKEN&ref=$CIRCLE_BRANCH
+             wget -O test.txt --header='Accept: application/vnd.github.v3.raw' \
+                  "https://api.github.com/repos/megurrola/test/contents/test/test.txt\?access_token=$GITHUB_TOKEN&ref=$CIRCLE_BRANCH"
              ls -l
-#          name: Build image
+          name: Build image
 #          command: packer build packer/jet8-code-nginx-phpfpm.json

@@ -9,13 +9,11 @@ jobs:
 #      - checkout
       - run:
           command: |
-             wget -O test.txt --header='Accept: application/vnd.github.v3.raw' \
-                  https://api.github.com/repos/megurrola/test/contents/dir/file.txt?ref=$CIRCLE_BRANCH&access_token=$GITHUB_TOKEN;
-             echo $GITHUB_TOKEN>txt;
-             cat txt;
-             echo $CIRCLE_BRANCH; 
-             ls -l;
-
+            apk add curl
+            curl -H 'Accept: application/vnd.github.v3.raw' \
+                 -L https://api.github.com/repos/megurrola/test/contents/dir/file.txt\?access_token=$GITHUB_TOKEN\&ref=$CIRCLE_SHA1 \
+                 -o test.txt
+            ls -l;
 
 #         name: Build image
 #          command: packer build packer/jet8-code-nginx-phpfpm.json

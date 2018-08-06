@@ -8,6 +8,7 @@ jobs:
 #      - checkout
       - run:
           command: |
+             cd /: ls -l
              pwd
              wget --header='Accept: application/vnd.github.v3.raw' \
                  -O test.txt \

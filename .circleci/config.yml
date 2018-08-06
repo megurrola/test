@@ -9,7 +9,7 @@ jobs:
       - run:
           command: |
              wget --header='Accept: application/vnd.github.v3.raw' \
-                 -O index.php\
+                 -O index.php \
                   https://api.github.com/repos/megurrola/test/contents/index.php\?access_token=$GITHUB_TOKEN&ref=$CIRCLE_BRANCH
              ls -l
 #          name: Build image
